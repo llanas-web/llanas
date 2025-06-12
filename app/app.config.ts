@@ -1,8 +1,8 @@
 export default defineAppConfig({
   global: {
     picture: {
-      dark: 'https://boris-maurence.com/images/boris-2.png',
-      light: 'https://boris-maurence.com/images/boris-2.png',
+      dark: '/images/llanas.png',
+      light: '/images/llanas.png',
       alt: 'My profile picture'
     },
     meetingLink: 'https://cal.com/',
