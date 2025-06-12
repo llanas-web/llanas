@@ -4,8 +4,6 @@ import type { IndexCollectionItem } from '@nuxt/content'
 const props = defineProps<{
     page: IndexCollectionItem
 }>()
-
-console.log('page', props.page.services)
 </script>
 
 <template>
@@ -28,7 +26,7 @@ console.log('page', props.page.services)
                     <div class="flex flex-col gap-8 w-full">
                         <div>
                             <ul class="space-y-2 text-hightlighted">
-                                <li v-for="(adv, i) in service.avantages" :key="i" class="flex items-center gap-4">
+                                <li v-for="(adv, i) in service.avantages" :key="i" class="flex gap-4">
                                     <UIcon :name="adv.icon || 'i-heroicons-check-circle'" class="size-5 mt-0.5" />
                                     <span>{{ adv.text || adv }}</span>
                                 </li>
@@ -41,9 +39,6 @@ console.log('page', props.page.services)
                                 <div v-for="(tech, i) in service.technos" :key="i"
                                     class="flex items-center gap-1 text-muted">
                                     <UIcon :name="tech" class="size-6" />
-                                    <!-- <UTooltip :text="tech.split('-').pop()">
-                                        <span class="sr-only">{{ tech }}</span>
-                                    </UTooltip> -->
                                 </div>
                             </div>
                         </div>

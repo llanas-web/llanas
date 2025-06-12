@@ -62,7 +62,7 @@ services:
       avantages:
         - text: "Design responsive et accessible"
           icon: "i-heroicons-device-phone-mobile"
-        - text: "Performance optimisée (Core Web Vitals)"
+        - text: "Performance optimisée"
           icon: "i-heroicons-rocket-launch"
         - text: "SEO friendly"
           icon: "i-heroicons-magnifying-glass"
@@ -76,9 +76,12 @@ services:
       description: "Développement de plateformes robustes et scalables."
       content: "Nous construisons des applications SaaS et e-commerce sur mesure, avec une architecture solide et des fonctionnalités avancées pour répondre à vos besoins spécifiques."
       avantages:
-        - "Architecture évolutive"
-        - "Sécurité et scalabilité"
-        - "Admin personnalisable"
+        - text: "Architecture évolutive"
+          icon: "i-heroicons-server-stack"
+        - text: "Fonctionnalités avancées"
+          icon: "i-heroicons-credit-card"
+        - text: "Sécurité renforcée"
+          icon: "i-heroicons-shield-check"
       technos:
         - "i-simple-icons-supabase"
         - "i-simple-icons-nuxtdotjs"
@@ -88,26 +91,29 @@ services:
       description: "Applications performantes avec expérience utilisateur fluide."
       content: "Nous développons des applications mobiles hybrides ou PWA, offrant une expérience utilisateur proche du natif, avec des fonctionnalités avancées comme la synchronisation et le mode offline."
       avantages:
-        - "Hybride ou PWA"
-        - "UX mobile native-like"
-        - "Synchronisation et mode offline"
+        - text: "Hybride ou PWA"
+          icon: "i-heroicons-device-tablet"
+        - text: "Expérience utilisateur optimisée"
+          icon: "i-heroicons-user-circle"
+        - text: "Synchronisation et mode offline"
+          icon: "i-heroicons-cloud-arrow-down"
       technos:
         - "i-simple-icons-flutter"
         - "i-simple-icons-dart"
         - "i-simple-icons-ionic"
 
 testimonials:
-  - quote: "Un partenaire fiable, rigoureux et à l'écoute. Grâce à son accompagnement, nous avons pu lancer notre MVP en un temps record avec une base technique solide."
+  - quote: "Un partenaire fiable, rigoureux et à l'écoute. Grâce à son accompagnement, nous avons pu lancer notre application mobile en un temps record avec une base technique solide."
     author:
-      name: "Julie Morel"
-      description: "CEO @ NovaStartup"
+      name: "Sylvain"
+      description: "CEO @ Daïkoon"
       avatar:
         src: "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?w=40&h=40&q=80"
         srcset: "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?w=80&h=80&q=80 2x"
-  - quote: "Au-delà du développement, il a su comprendre nos enjeux business et proposer des solutions pertinentes. Un vrai atout dans notre équipe projet."
+  - quote: "Au-delà du développement, il a su comprendre nos enjeux business et proposer des solutions pertinentes."
     author:
-      name: "Thomas Leroy"
-      description: "CTO @ Agilitek"
+      name: "Camille"
+      description: "Gérant @ Café Vienne"
       avatar:
         src: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=40&h=40&q=80"
         srcset: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=80&h=80&q=80 2x"
@@ -120,12 +126,37 @@ projects:
     to: "/projects"
 
 faq:
-  title: "Questions fréquentes"
-  description: "Voici les réponses aux questions que l'on nous pose souvent."
+  title: Questions fréquentes
+  description: Réponses aux interrogations courantes sur nos services et notre fonctionnement.
   categories:
-    - title: Services
+    - title: Services & Méthode
       questions:
-        - label: Travaillez-vous avec des startups ?
+        - label: "Quels services proposez-vous ?"
           content: |
-            Oui ! Nous accompagnons régulièrement des startups en phase de lancement ou de croissance, en apportant une expertise technique et produit.
-        - label: Quels types de projets prenez
+            Nous proposons la création de sites vitrines, d'applications web (SaaS, e-commerce) et d'applications mobiles hybrides. Cela inclut également l'intégration à partir de maquettes, le développement backend si nécessaire, et l'accompagnement technique global.
+        - label: "Quelle est votre méthode de travail ?"
+          content: |
+            Notre approche est agile et collaborative. Elle se compose généralement des étapes suivantes : compréhension des besoins, cadrage technique, développement itératif, recettes et déploiement. Nous nous adaptons à vos outils et rythmes pour une collaboration fluide.
+        - label: "Travaillez-vous avec des startups ?"
+          content: |
+            Oui, très régulièrement. Nous intervenons en phase de lancement ou de refonte pour structurer les fondations techniques, accélérer le développement ou renforcer l'équipe produit.
+    - title: Tarifs & Délais
+      questions:
+        - label: "Combien coûte un projet ?"
+          content: |
+            Le budget dépend fortement de la complexité, des fonctionnalités et du planning. Un site vitrine simple démarre autour de 2 000 €, tandis qu’un projet applicatif complet peut aller de 6 000 à 20 000 €.
+        - label: "Quels sont vos délais moyens ?"
+          content: |
+            Pour un site vitrine : 2 à 4 semaines. Pour une application web ou mobile : de 4 à 10 semaines selon la portée. Un planning détaillé est fourni après le cadrage initial.
+        - label: "Proposez-vous un support ou une maintenance ?"
+          content: |
+            Oui. Nous proposons un accompagnement post-livraison avec options de maintenance corrective, évolutive ou sous forme de forfaits mensuels.
+    - title: À propos
+      questions:
+        - label: "Qu’est-ce qui vous motive dans ce métier ?"
+          content: |
+            Ce qui me passionne, c’est de transformer des idées en produits concrets et utiles. J’aime concevoir des solutions efficaces et fiables, tout en maintenant un échange constant avec mes clients.
+        - label: "Que faites-vous en dehors du travail ?"
+          content: |
+            En dehors du code, je pratique l'escalade et le surf dès que possible. Je passe aussi du temps à rénover ma maison — un autre type de projet qui me stimule — et j’ai un petit faible pour les bons vins que j’aime partager entre amis.          content: |
+            Je suis passionné de tech, mais j’aime aussi prendre l’air, découvrir de nouveaux endroits et apprendre en continu sur le développement et la conception produit.
