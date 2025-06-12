@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Analytics } from '@vercel/analytics/next';
 const colorMode = useColorMode()
 
 const color = computed(() => colorMode.value === 'dark' ? '#020618' : 'white')
@@ -50,5 +51,6 @@ const [{ data: navigation }, { data: files }] = await Promise.all([
         <NuxtPage />
       </UMain>
     </NuxtLayout>
+    <Analytics />
   </UApp>
 </template>
