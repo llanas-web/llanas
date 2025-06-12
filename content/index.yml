@@ -120,7 +120,7 @@ testimonials:
 
 projects:
   title: "Nos projets"
-  description: "Découvrez quelques-unes de nos réalisations"
+  description: "Découvrez une sélection de projets récents de llanas, illustrant notre expertise en développement web et mobile. Chaque réalisation est le fruit d'une collaboration étroite avec nos clients, visant à répondre à des besoins spécifiques tout en garantissant performance et qualité."
   link:
     label: "Voir tous les projets"
     to: "/projects"
