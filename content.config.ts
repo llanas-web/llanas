@@ -1,3 +1,4 @@
+import { icon } from '#build/ui-pro/prose'
 import { defineCollection, defineContentConfig, z } from '@nuxt/content'
 
 const createBaseSchema = () => z.object({
@@ -45,6 +46,17 @@ export default defineContentConfig({
           images: z.array(createImageSchema())
         }),
         about: createBaseSchema(),
+        services: createBaseSchema().extend({
+          items: z.array(createBaseSchema().extend({
+            icon: z.string().editor({ input: 'icon' }),
+            content: z.string().nonempty(),
+            avantages: z.array(z.object({
+              text: z.string().nonempty(),
+              icon: z.string().editor({ input: 'icon' })
+            })),
+            technos: z.array(z.string().nonempty())
+          })),
+        }),
         experience: createBaseSchema().extend({
           items: z.array(z.object({
             date: z.date(),

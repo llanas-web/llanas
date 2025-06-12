@@ -25,6 +25,7 @@
     "nuxt-og-image": "^5.1.6"
   },
   "devDependencies": {
+    "@iconify-json/uil": "^1.2.3",
     "@nuxt/eslint": "^1.4.1",
     "eslint": "^9.28.0",
     "typescript": "^5.8.3",
