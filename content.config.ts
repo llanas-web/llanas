@@ -45,7 +45,9 @@ export default defineContentConfig({
           images: z.array(createImageSchema())
         }),
         about: createBaseSchema(),
-        personal: createAuthorSchema(),
+        personal: createAuthorSchema().extend({
+          alt: z.string().optional(),
+        }),
         experience: createBaseSchema().extend({
           items: z.array(z.object({
             date: z.date(),

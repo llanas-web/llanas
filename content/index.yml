@@ -1,6 +1,6 @@
 seo:
-  title: "Llanas - Développement Web & Conseil Tech"
-  description: "Je conçois des solutions web sur mesure pour répondre aux enjeux techniques et business de mes clients. Expertise, fiabilité et approche humaine."
+  title: "Développeur freelance à Perpignan - Applications mobiles, SaaS & e-commerce | Llanas.dev"
+  description: "Développeur indépendant à Perpignan, je conçois des applications mobiles, SaaS et e-commerce sur mesure. Freelance expérimenté, disponible pour vos projets tech."
 
 title: "Je développe votre site web comme si c'était le mien."
 description: "Pas d'équipe floue, pas d'intermédiaire : je construis des solutions web solides, bien pensées et maintenables, avec vous, pas à côté de vous."
@@ -10,6 +10,9 @@ hero:
     - label: "Découvrir mes services"
       to: "/#services"
       color: "primary"
+    - label: "Voir mes projets"
+      to: "/projects"
+      color: "neutral"
   images: [] # à compléter avec tes images
 
 about:
@@ -29,9 +32,10 @@ personal:
   description: |
     “Mon job, ce n'est pas juste d'écrire du code.
     C'est de faire en sorte que votre site fonctionne longtemps, pour tout le monde, et sans vous coûter plus que nécessaire.”
-  avatar: https://boris-maurence.com/images/boris-2.png
+  avatar: /images/boris-maurence-developpeur-perpignan.png
   to: "/about"
   username: "@llanas"
+  alt: "Boris Maurence - développeur freelance à Perpignan"
 
 experience:
   title: Parcours

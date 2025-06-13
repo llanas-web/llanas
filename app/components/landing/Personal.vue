@@ -10,6 +10,7 @@ defineProps<{
     <UPageSection :ui="{
         container: '!p-0 gap-4 sm:gap-4',
         title: 'text-left text-xl sm:text-xl lg:text-2xl font-medium',
+        description: 'flex flex-col items-center gap-8 text-center',
     }">
         <template #description>
             <div class="flex items-center justify-center">
@@ -26,8 +27,8 @@ defineProps<{
                     delay: 0.1
                 }">
                     <UColorModeImage class="size-24 ring ring-default ring-offset-3 ring-offset-(--ui-bg) rounded-full"
-                        :light="page.personal.avatar" :dark="page.personal.avatar" :alt="page.personal.name"
-                        size="3xl" />
+                        :light="page.personal.avatar" :dark="page.personal.avatar" :alt="page.personal.alt"
+                        format="webp" size="3xl" />
                 </Motion>
             </div>
             <div>
