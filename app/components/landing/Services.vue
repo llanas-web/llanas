@@ -18,7 +18,7 @@ const props = defineProps<{
                         root: 'flex items-start gap-4 p-4',
                         icon: 'text-primary size-8',
                         title: 'text-2xl font-bold mb-2',
-                        description: 'text-dimmed text-lg',
+                        description: 'text-secondary text-lg',
                     }">
                     <template #footer>
                         <p class="text-muted">{{ service.content }}</p>
@@ -27,7 +27,8 @@ const props = defineProps<{
                         <div>
                             <ul class="space-y-2 text-hightlighted">
                                 <li v-for="(adv, i) in service.avantages" :key="i" class="flex gap-4">
-                                    <UIcon :name="adv.icon || 'i-heroicons-check-circle'" class="size-5 mt-0.5" />
+                                    <UIcon :name="adv.icon || 'i-heroicons-check-circle'"
+                                        class="size-5 mt-0.5 text-secondary" />
                                     <span>{{ adv.text || adv }}</span>
                                 </li>
                             </ul>
@@ -38,7 +39,7 @@ const props = defineProps<{
                             <div class="flex flex-wrap gap-3 items-center">
                                 <div v-for="(tech, i) in service.technos" :key="i"
                                     class="flex items-center gap-1 text-muted">
-                                    <UIcon :name="tech" class="size-6" />
+                                    <UIcon :name="tech" class="size-6 text-primary" />
                                 </div>
                             </div>
                         </div>

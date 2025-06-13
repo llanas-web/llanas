@@ -25,7 +25,6 @@ const createAuthorSchema = () => z.object({
   name: z.string(),
   description: z.string().optional(),
   username: z.string().optional(),
-  twitter: z.string().optional(),
   to: z.string().optional(),
   avatar: createImageSchema().optional()
 })
@@ -46,17 +45,7 @@ export default defineContentConfig({
           images: z.array(createImageSchema())
         }),
         about: createBaseSchema(),
-        services: createBaseSchema().extend({
-          items: z.array(createBaseSchema().extend({
-            icon: z.string().editor({ input: 'icon' }),
-            content: z.string().nonempty(),
-            avantages: z.array(z.object({
-              text: z.string().nonempty(),
-              icon: z.string().editor({ input: 'icon' })
-            })),
-            technos: z.array(z.string().nonempty())
-          })),
-        }),
+        personal: createAuthorSchema(),
         experience: createBaseSchema().extend({
           items: z.array(z.object({
             date: z.date(),
@@ -68,6 +57,17 @@ export default defineContentConfig({
               color: z.string()
             })
           }))
+        }),
+        services: createBaseSchema().extend({
+          items: z.array(createBaseSchema().extend({
+            icon: z.string().editor({ input: 'icon' }),
+            content: z.string().nonempty(),
+            avantages: z.array(z.object({
+              text: z.string().nonempty(),
+              icon: z.string().editor({ input: 'icon' })
+            })),
+            technos: z.array(z.string().nonempty())
+          })),
         }),
         testimonials: z.array(createTestimonialSchema()),
         blog: createBaseSchema(),
