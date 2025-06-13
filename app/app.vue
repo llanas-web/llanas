@@ -74,7 +74,6 @@ useSeoMeta({
   description: 'Développeur indépendant à Perpignan, je conçois des applications mobiles, SaaS et e-commerce sur mesure. Freelance expérimenté, disponible pour vos projets tech.',
   ogTitle: 'Développeur freelance à Perpignan',
   ogDescription: 'Développement mobile, SaaS et e-commerce pour PME et startups à Perpignan.',
-  ogImage: 'https://llanas.dev/images/boris-maurence-developpeur-perpignan.png',
   ogUrl: 'https://llanas.dev',
   ogImage: 'https://llanas.dev/images/boris-maurence-developpeur-perpignan.png',
   twitterCard: 'summary_large_image'

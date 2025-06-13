@@ -81,7 +81,10 @@ defineProps<{
       }">
         <div v-if="page.hero.links" class="flex items-center gap-2">
           <UButton v-bind="page.hero.links[0]" />
-          <UButton v-bind="page.hero.links[1]" />
+          <UButton v-bind="page.hero.links[1]">
+            {{ page.hero.links[1].label }}
+            <UIcon name="i-lucide-arrow-right" class="size-4" />
+          </UButton>
         </div>
       </Motion>
 
