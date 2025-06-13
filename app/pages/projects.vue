@@ -10,8 +10,9 @@ if (!page.value) {
   })
 }
 
-const { data: projects } = await useAsyncData('projects', () => {
-  return queryCollection('projects').all()
+const { data: projects } = await useAsyncData('projects', async () => {
+  const projects = await queryCollection('projects').all()
+  return projects.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 })
 
 const { global } = useAppConfig()
@@ -22,6 +23,18 @@ useSeoMeta({
   description: page.value?.seo?.description || page.value?.description,
   ogDescription: page.value?.seo?.description || page.value?.description
 })
+
+const categoryLabels = {
+  web: '🌐 Site vitrine',
+  mobile: '📱 Application mobile',
+  saas: '📦 Application SaaS',
+  ecommerce: '🛒 E-commerce',
+}
+
+const statusLabels = {
+  pending: { label: 'En cours', color: 'warning' },
+  done: { label: 'Terminé', color: 'success' },
+}
 </script>
 
 <template>
@@ -47,12 +60,21 @@ useSeoMeta({
         :in-view-options="{ once: true }">
         <UPageCard :title="project.title" :description="project.description" orientation="horizontal" variant="naked"
           :reverse="index % 2 === 1" class="group" :ui="{
-            wrapper: 'max-sm:order-last'
+            wrapper: 'max-sm:order-last',
+            leading: 'flex justify-between items-center gap-4 w-full',
+            footer: 'flex justify-between items-center gap-4 w-full',
           }">
           <template #leading>
             <span class="text-sm text-muted">
               {{ new Date(project.date).toLocaleDateString() }}
             </span>
+            <div class="flex items-center gap-2">
+              <UBadge color="info" variant="outline">{{ categoryLabels[project.category] }}</UBadge>
+              <UBadge :color="statusLabels[project.status].color" variant="soft">{{ statusLabels[project.status].label
+              }}
+              </UBadge>
+            </div>
+
           </template>
           <template #footer>
             <a :href="project.url" target="_blank" class="text-sm text-primary flex items-center">
@@ -60,6 +82,7 @@ useSeoMeta({
               <UIcon name="i-lucide-arrow-right"
                 class="size-4 text-primary transition-all opacity-0 group-hover:translate-x-1 group-hover:opacity-100" />
             </a>
+
           </template>
           <img :src="project.image" :alt="project.title" class="object-cover w-full h-48 rounded-lg">
         </UPageCard>

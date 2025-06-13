@@ -3,3 +3,5 @@ description: "Application de gestion financière pour les entreprises, permettan
 image: "/images/invocloud.png"
 url: "https://invocloud.llanas.dev"
 date: "2025-04"
+category: "saas"
+status: "pending"

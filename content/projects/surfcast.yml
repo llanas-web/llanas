@@ -3,3 +3,5 @@ description: "Application web de prévisions de surf en temps réel, conçue pou
 image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
 url: "https://surfcast.llanas.dev"
 date: "2024-01"
+category: "saas"
+status: "done"

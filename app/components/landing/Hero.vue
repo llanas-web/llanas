@@ -11,7 +11,7 @@ defineProps<{
 <template>
   <UPageHero :ui="{
     headline: 'flex items-center justify-center',
-    title: 'text-shadow-md max-w-lg mx-auto',
+    title: 'text-shadow-md max-w-lg mx-auto mt-8',
     links: 'mt-4 flex-col justify-center items-center'
   }">
     <template #headline>
