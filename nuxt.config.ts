@@ -1,6 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  ssr: true,
   modules: [
     '@nuxt/eslint',
     '@nuxt/image',
@@ -24,9 +23,11 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
 
   nitro: {
+    static: true,
     prerender: {
       routes: [
-        '/'
+        '/',
+        '/projects',
       ],
       crawlLinks: true
     }
