@@ -8,7 +8,8 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'nuxt-og-image',
     'motion-v/nuxt',
-    'nuxt-gtag'
+    'nuxt-gtag',
+    'nuxt-lucide-icons'
   ],
 
   devtools: {
@@ -29,7 +30,7 @@ export default defineNuxtConfig({
   },
 
   nitro: {
-    static: true,
+    preset: 'static',
     prerender: {
       routes: [
         '/',
