@@ -32,7 +32,9 @@ personal:
   description: |
     “Mon job, ce n'est pas juste d'écrire du code.
     C'est de faire en sorte que votre site fonctionne longtemps, pour tout le monde, et sans vous coûter plus que nécessaire.”
-  avatar: /images/boris-maurence-developpeur-perpignan.png
+  avatar: 
+      src: /images/boris-maurence-developpeur-perpignan.png
+      alt: "Boris Maurence - développeur freelance à Perpignan"
   to: "/about"
   username: "@llanas"
   alt: "Boris Maurence - développeur freelance à Perpignan"

@@ -18,11 +18,6 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
-  routeRules: {
-    '/': { prerender: true },
-    '/projects': { prerender: true }
-  },
-
   future: {
     compatibilityVersion: 4
   },
@@ -30,7 +25,6 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
 
   nitro: {
-    preset: 'static',
     prerender: {
       routes: [
         '/',
