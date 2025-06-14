@@ -7,7 +7,8 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@vueuse/nuxt',
     'nuxt-og-image',
-    'motion-v/nuxt'
+    'motion-v/nuxt',
+    'nuxt-gtag'
   ],
 
   devtools: {
@@ -45,5 +46,13 @@ export default defineNuxtConfig({
         braceStyle: '1tbs'
       }
     }
+  },
+  
+  gtag: {
+    enabled: process.env.NODE_ENV === 'production',
+    id: 'G-90653FTMCQ',
+    config: {
+      page_title: 'Développeur freelance à Perpignan - Applications mobiles, SaaS & e-commerce | Llanas.dev',
+    },
   }
 })
