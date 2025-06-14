@@ -25,7 +25,7 @@ export default defineAppConfig({
     },
     prose: {
       prose: {
-        strong: 'text-secondary',
+        strong: 'text-secondary'
       }
     }
   },

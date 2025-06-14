@@ -1,38 +1,44 @@
-import { icon } from '#build/ui-pro/prose'
 import { defineCollection, defineContentConfig, z } from '@nuxt/content'
 
-const createBaseSchema = () => z.object({
-  title: z.string(),
-  description: z.string()
-})
+const createBaseSchema = () =>
+  z.object({
+    title: z.string(),
+    description: z.string()
+  })
 
-const createButtonSchema = () => z.object({
-  label: z.string(),
-  icon: z.string().optional(),
-  to: z.string().optional(),
-  color: z.enum(['primary', 'neutral', 'success', 'warning', 'error', 'info']).optional(),
-  size: z.enum(['xs', 'sm', 'md', 'lg', 'xl']).optional(),
-  variant: z.enum(['solid', 'outline', 'subtle', 'soft', 'ghost', 'link']).optional(),
-  target: z.enum(['_blank', '_self']).optional()
-})
+const createButtonSchema = () =>
+  z.object({
+    label: z.string(),
+    icon: z.string().optional(),
+    to: z.string().optional(),
+    color: z.enum(['primary', 'neutral', 'success', 'warning', 'error', 'info'])
+      .optional(),
+    size: z.enum(['xs', 'sm', 'md', 'lg', 'xl']).optional(),
+    variant: z.enum(['solid', 'outline', 'subtle', 'soft', 'ghost', 'link'])
+      .optional(),
+    target: z.enum(['_blank', '_self']).optional()
+  })
 
-const createImageSchema = () => z.object({
-  src: z.string().editor({ input: 'media' }),
-  alt: z.string()
-})
+const createImageSchema = () =>
+  z.object({
+    src: z.string().editor({ input: 'media' }),
+    alt: z.string()
+  })
 
-const createAuthorSchema = () => z.object({
-  name: z.string(),
-  description: z.string().optional(),
-  username: z.string().optional(),
-  to: z.string().optional(),
-  avatar: createImageSchema().optional()
-})
+const createAuthorSchema = () =>
+  z.object({
+    name: z.string(),
+    description: z.string().optional(),
+    username: z.string().optional(),
+    to: z.string().optional(),
+    avatar: createImageSchema().optional()
+  })
 
-const createTestimonialSchema = () => z.object({
-  quote: z.string(),
-  author: createAuthorSchema()
-})
+const createTestimonialSchema = () =>
+  z.object({
+    quote: z.string(),
+    author: createAuthorSchema()
+  })
 
 export default defineContentConfig({
   collections: {
@@ -46,7 +52,7 @@ export default defineContentConfig({
         }),
         about: createBaseSchema(),
         personal: createAuthorSchema().extend({
-          alt: z.string().optional(),
+          alt: z.string().optional()
         }),
         experience: createBaseSchema().extend({
           items: z.array(z.object({
@@ -61,15 +67,16 @@ export default defineContentConfig({
           }))
         }),
         services: createBaseSchema().extend({
-          items: z.array(createBaseSchema().extend({
-            icon: z.string().editor({ input: 'icon' }),
-            content: z.string().nonempty(),
-            avantages: z.array(z.object({
-              text: z.string().nonempty(),
-              icon: z.string().editor({ input: 'icon' })
-            })),
-            technos: z.array(z.string().nonempty())
-          })),
+          items: z.array(
+            createBaseSchema().extend({
+              content: z.string().nonempty(),
+              avantages: z.array(z.object({
+                text: z.string().nonempty(),
+                icon: z.string().editor({ input: 'icon' })
+              })),
+              technos: z.array(z.string().nonempty())
+            })
+          )
         }),
         testimonials: z.array(createTestimonialSchema()),
         blog: createBaseSchema(),
@@ -83,7 +90,8 @@ export default defineContentConfig({
                   content: z.string().nonempty()
                 })
               )
-            }))
+            })
+          )
         })
       })
     }),
@@ -98,7 +106,7 @@ export default defineContentConfig({
         tags: z.array(z.string()),
         date: z.date(),
         category: z.enum(['web', 'saas', 'ecommerce', 'mobile']).optional(),
-        status: z.enum(['done', 'pending']).optional(),
+        status: z.enum(['done', 'pending']).optional()
       })
     }),
     blog: defineCollection({

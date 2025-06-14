@@ -8,4 +8,4 @@ export const navLinks: NavigationMenuItem[] = [{
   label: 'Projets',
   icon: 'i-lucide-folder',
   to: '/projects'
-},]
+}]

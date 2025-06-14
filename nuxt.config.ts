@@ -18,23 +18,23 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
+  routeRules: {
+    '/': { prerender: true },
+    '/projects': { prerender: true }
+  },
+
   future: {
     compatibilityVersion: 4
   },
 
   compatibilityDate: '2024-11-01',
 
-  routeRules: {
-    '/': { prerender: true },
-    '/projects': { prerender: true },
-  },
-
   nitro: {
     preset: 'static',
     prerender: {
       routes: [
         '/',
-        '/projects',
+        '/projects'
       ],
       crawlLinks: true
     }
@@ -48,12 +48,12 @@ export default defineNuxtConfig({
       }
     }
   },
-  
+
   gtag: {
     enabled: process.env.NODE_ENV === 'production',
     id: 'G-90653FTMCQ',
     config: {
-      page_title: 'Développeur freelance à Perpignan - Applications mobiles, SaaS & e-commerce | Llanas.dev',
-    },
+      page_title: 'Développeur freelance à Perpignan - Applications mobiles, SaaS & e-commerce | Llanas.dev'
+    }
   }
 })

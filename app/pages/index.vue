@@ -21,15 +21,19 @@ useSeoMeta({
 <template>
   <UPage v-if="page">
     <LandingHero :page />
-    <UPageSection :ui="{
-      container: '!pt-0 lg:grid lg:grid-cols-2 lg:gap-8'
-    }">
-      <LandingAbout class="row-span-2" :page />
+    <UPageSection
+      :ui="{
+        container: '!pt-0 lg:grid lg:grid-cols-2 lg:gap-8'
+      }"
+    >
+      <LandingAbout
+        class="row-span-2"
+        :page
+      />
       <LandingPersonal :page />
       <LandingWorkExperience :page />
-    </UPageSection :page>
+    </UPageSection>
     <LandingServices :page />
-    <!-- <LandingBlog :page /> -->
     <LandingTestimonials :page />
     <LandingFAQ :page />
   </UPage>

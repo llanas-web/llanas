@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { Analytics } from '@vercel/analytics/nuxt';
+import { Analytics } from '@vercel/analytics/nuxt'
+
 const colorMode = useColorMode()
 
 const color = computed(() => colorMode.value === 'dark' ? '#020618' : 'white')
@@ -19,50 +20,51 @@ useHead({
   script: [
     {
       type: 'application/ld+json',
+
       innerHTML: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Boris Maurence",
-        "jobTitle": "Développeur freelance",
-        "url": "https://llanas.dev",
-        "image": "https://llanas.dev/images/boris-maurence-developpeur-perpignan.png",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Perpignan",
-          "addressCountry": "FR"
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        'name': 'Boris Maurence',
+        'jobTitle': 'Développeur freelance',
+        'url': 'https://llanas.dev',
+        'image': 'https://llanas.dev/images/boris-maurence-developpeur-perpignan.png',
+        'address': {
+          '@type': 'PostalAddress',
+          'addressLocality': 'Perpignan',
+          'addressCountry': 'FR'
         },
-        "sameAs": [
-          "https://github.com/llanas-dev",
-          "https://www.linkedin.com/in/borismaurence/"
+        'sameAs': [
+          'https://github.com/llanas-dev',
+          'https://www.linkedin.com/in/borismaurence/'
         ]
       })
     },
     {
       type: 'application/ld+json',
       innerHTML: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Llanas.dev",
-        "description": "Développement d'applications mobiles, SaaS et e-commerce à Perpignan.",
-        "url": "https://llanas.dev",
-        "image": "https://llanas.dev/images/boris-maurence-developpeur-perpignan.png",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Perpignan",
-          "addressCountry": "FR"
+        '@context': 'https://schema.org',
+        '@type': 'LocalBusiness',
+        'name': 'Llanas.dev',
+        'description': 'Développement d\'applications mobiles, SaaS et e-commerce à Perpignan.',
+        'url': 'https://llanas.dev',
+        'image': 'https://llanas.dev/images/boris-maurence-developpeur-perpignan.png',
+        'address': {
+          '@type': 'PostalAddress',
+          'addressLocality': 'Perpignan',
+          'addressCountry': 'FR'
         },
-        "areaServed": {
-          "@type": "Place",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Perpignan",
-            "addressCountry": "FR"
+        'areaServed': {
+          '@type': 'Place',
+          'address': {
+            '@type': 'PostalAddress',
+            'addressLocality': 'Perpignan',
+            'addressCountry': 'FR'
           }
         },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "contactType": "customer support",
-          "email": "contact@llanas.dev"
+        'contactPoint': {
+          '@type': 'ContactPoint',
+          'contactType': 'customer support',
+          'email': 'contact@llanas.dev'
         }
       })
     }
@@ -78,24 +80,6 @@ useSeoMeta({
   ogImage: 'https://llanas.dev/images/boris-maurence-developpeur-perpignan.png',
   twitterCard: 'summary_large_image'
 })
-
-const [{ data: navigation }, { data: files }] = await Promise.all([
-  useAsyncData('navigation', () => {
-    return Promise.all([
-      queryCollectionNavigation('blog')
-    ])
-  }, {
-    transform: data => data.flat()
-  }),
-  useLazyAsyncData('search', () => {
-    return Promise.all([
-      queryCollectionSearchSections('blog')
-    ])
-  }, {
-    server: false,
-    transform: data => data.flat()
-  })
-])
 </script>
 
 <template>
