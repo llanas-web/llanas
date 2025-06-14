@@ -22,6 +22,11 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2024-11-01',
 
+  routeRules: {
+    '/': { prerender: true },
+    '/projects': { prerender: true },
+  },
+
   nitro: {
     static: true,
     prerender: {
