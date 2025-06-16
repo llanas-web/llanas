@@ -1,3 +1,5 @@
+import process from 'node:process'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
@@ -9,7 +11,8 @@ export default defineNuxtConfig({
     'nuxt-og-image',
     'motion-v/nuxt',
     'nuxt-gtag',
-    'nuxt-lucide-icons'
+    'nuxt-lucide-icons',
+    '@nuxthq/studio'
   ],
 
   devtools: {
