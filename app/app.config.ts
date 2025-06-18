@@ -30,7 +30,7 @@ export default defineAppConfig({
     }
   },
   footer: {
-    credits: `Copyright © ${new Date().getFullYear()}`,
+    credits: `Copyright Llanas © ${new Date().getFullYear()}`,
     colorMode: false,
     links: [{
       'icon': 'i-simple-icons-linkedin',

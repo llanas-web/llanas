@@ -11,7 +11,10 @@ useHead({
   meta: [
     { charset: 'utf-8' },
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-    { key: 'theme-color', name: 'theme-color', content: color }
+    { key: 'theme-color', name: 'theme-color', content: color },
+    { name: 'description', content: 'Développeur freelance à Perpignan, je conçois des applications mobiles, SaaS et e-commerce sur mesure.' },
+    { name: 'author', content: 'Boris Maurence' },
+    { name: 'keywords', content: 'développeur, freelance, Perpignan, applications mobiles, SaaS, e-commerce, nuxt, flutter, react' }
   ],
   link: [
     { rel: 'icon', href: '/favicon.ico' },
